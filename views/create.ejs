@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+
+<section class="form-page">
+  <h1>Create a Study Session</h1>
+
+  <% if (error) { %>
+    <p class="alert"><%= error %></p>
+  <% } %>
+
+  <!-- The form POSTs to /sessions, handled in routes/sessions.js -->
+  <form action="/sessions" method="POST">
+    <label>Session title
+      <input type="text" name="title" required value="<%= form.title || '' %>">
+    </label>
+
+    <label>Course code
+      <input type="text" name="course" placeholder="e.g. INFR3120" required value="<%= form.course || '' %>">
+    </label>
+
+    <label>Topic
+      <input type="text" name="topic" value="<%= form.topic || '' %>">
+    </label>
+
+    <label>Your name (host)
+      <input type="text" name="host" required value="<%= form.host || '' %>">
+    </label>
+
+    <label>Location (room, library or online link)
+      <input type="text" name="location" required value="<%= form.location || '' %>">
+    </label>
+
+    <div class="row">
+      <label>Date
+        <input type="date" name="date" required value="<%= form.date || '' %>">
+      </label>
+      <label>Start time
+        <input type="time" name="startTime" required value="<%= form.startTime || '' %>">
+      </label>
+      <label>Max students
+        <input type="number" name="maxStudents" min="2" max="50" value="<%= form.maxStudents || 6 %>">
+      </label>
+    </div>
+
+    <label>Description
+      <textarea name="description" rows="4"><%= form.description || '' %></textarea>
+    </label>
+
+    <button type="submit" class="btn">Create Session</button>
+    <a href="/" class="btn btn-secondary">Cancel</a>
+  </form>
+</section>
+
+<%- include('partials/footer') %>

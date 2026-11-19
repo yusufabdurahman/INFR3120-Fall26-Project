@@ -1,0 +1,18 @@
+{
+  "name": "infr3120-fall26-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.6",
+    "debug": "~4.3.4",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "~4.19.2",
+    "http-errors": "~2.0.0",
+    "mongoose": "^8.5.0",
+    "morgan": "~1.10.0"
+  }
+}

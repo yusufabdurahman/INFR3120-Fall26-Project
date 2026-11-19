@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+
+<!-- Hero section: site name, tagline and the hero button that leads to the create form -->
+<section class="hero">
+  <img src="/images/logo.svg" alt="StudyHive logo" width="120" height="120">
+  <h1>StudyHive</h1>
+  <p>Find a study group or start your own. Buzz together, learn together.</p>
+  <a class="btn btn-hero" href="/sessions/new">+ Create a Study Session</a>
+</section>
+
+<!-- Display section: table of open sessions pulled from MongoDB -->
+<section class="sessions">
+  <h2>Open Study Sessions</h2>
+
+  <% if (dbError) { %>
+    <p class="alert"><%= dbError %></p>
+  <% } %>
+
+  <% if (sessions.length === 0) { %>
+    <p class="empty">No open sessions yet. Be the first to create one!</p>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Course</th>
+          <th>Topic</th>
+          <th>Host</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Location</th>
+          <th>Seats</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% sessions.forEach(function (s) { %>
+          <tr>
+            <td><%= s.title %></td>
+            <td><%= s.course %></td>
+            <td><%= s.topic || '-' %></td>
+            <td><%= s.host %></td>
+            <td><%= s.date.toISOString().slice(0, 10) %></td>
+            <td><%= s.startTime %></td>
+            <td><%= s.location %></td>
+            <td><%= s.maxStudents %></td>
+            <td><span class="badge"><%= s.status %></span></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } %>
+</section>
+
+<%- include('partials/footer') %>

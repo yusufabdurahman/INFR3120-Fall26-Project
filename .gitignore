@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Secrets: never commit these (MongoDB Atlas password lives here)
+.env
+
+# Logs and OS files
+*.log
+.DS_Store
