@@ -2,7 +2,7 @@
 
 StudyHive is a web app where university students create and find study sessions (course, topic, location, date/time, capacity). This is the first release.
 
-Live site: (paste your Render URL here after deploying)
+Live site: https://infr3120-fall26-project-3h55.onrender.com
 
 Demo video: (paste your YouTube link here)
 
