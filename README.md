@@ -4,7 +4,7 @@ StudyHive is a web app where university students create and find study sessions 
 
 Live site: https://infr3120-fall26-project-3h55.onrender.com
 
-Demo video: (paste your YouTube link here)
+Demo video: (https://go.screenpal.com/watch/cOXr1tn4pXQ)
 
 GitHub repository: https://github.com/yusufabdurahman/INFR3120-Fall26-Project
 
