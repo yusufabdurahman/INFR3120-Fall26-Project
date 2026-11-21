@@ -68,4 +68,18 @@ No other external code was used. (Add any extra sources here, with author and li
 
 ## Team contributions
 
-See `INFR3120_Part1_Project_Idea_and_Contributions.docx` in this repository.
+Isaiah Olokude (Backend and deployment)
+
+- Created the express-generator project, `app.js` and `bin/www`
+- Set up MongoDB Atlas, `.env`/`.env.example` and `.gitignore`
+- Wrote the Mongoose model `models/session.js`
+- Built the create route `routes/sessions.js` and the form `views/create.ejs`
+- Deployed the site on Render
+
+Yusuf Abdurahman (Frontend and docs), GitHub: yusufabdurahman
+
+- Built the landing page `views/index.ejs` with the sessions table
+- Wrote `routes/index.js`, which loads and shows open sessions
+- Made the header and footer partials
+- Styled the site with `style.css`
+- Drew `logo.svg`
